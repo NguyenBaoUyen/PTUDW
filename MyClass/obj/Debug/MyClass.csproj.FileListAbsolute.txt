@@ -1,0 +1,12 @@
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\obj\Debug\MyClass.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\obj\Debug\MyClass.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\bin\Debug\MyClass.dll.config
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\bin\Debug\MyClass.dll
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\bin\Debug\MyClass.pdb
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\obj\Debug\MyClass.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\obj\Debug\MyClass.dll
+C:\Users\ASUS\Desktop\Baith1\PTUDW\MyClass\obj\Debug\MyClass.pdb

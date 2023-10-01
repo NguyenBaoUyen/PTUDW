@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MyClass.Model;
 
 namespace _63CNTT5N1.Controllers
 {
@@ -11,6 +13,9 @@ namespace _63CNTT5N1.Controllers
         // GET: Site
         public ActionResult Index()
         {
+            MyDBContext db = new MyDBContext();
+            int Count = db.Menus.Count();
+            ViewBag.choi = Count;
             return View();
         }
     }
