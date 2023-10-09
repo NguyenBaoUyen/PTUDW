@@ -14,7 +14,7 @@ namespace _63CNTT5N1.Controllers
         public ActionResult Index()
         {
             MyDBContext db = new MyDBContext();
-            int Count = db.Menus.Count();
+            int Count = db.Products.Count();
             ViewBag.choi = Count;
             return View();
         }
