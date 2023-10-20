@@ -44,7 +44,7 @@ namespace MyClass.Model
         public DateTime CreateAt { get; set; }
 
         [Display(Name = "Cập nhật bới")]
-        [Required(ErrorMessage = "Người cập nhật không để trống")]
+        [Required(ErrorMessage = "Người cập nhật không để trống")]//required k đc phep null
         public int UpdateBy { get; set; }
 
         [Display(Name = "Ngày cập nhật")]
