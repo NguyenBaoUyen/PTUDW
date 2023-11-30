@@ -17,7 +17,6 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
     public class SupplierController : Controller
     {
         SuppliersDAO suppliersDAO = new SuppliersDAO();
-        private string imgName;
 
         //INDEX
         // GET: Admin/Supplier
@@ -25,8 +24,6 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
         {
             return View(suppliersDAO.getList("Index"));
         }
-
-        //DETAIL
         // GET: Admin/Supplier/Details/5
         public ActionResult Details(int? id)
         {
@@ -64,8 +61,10 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
                 suppliers.CreateAt = DateTime.Now;
                 //xu ly tu dong: UpdateAt
                 suppliers.UpdateAt = DateTime.Now;
-                suppliers.CreateBy = Convert.ToInt32(Session["UserID"]);
-                suppliers.UpdateBy = Convert.ToInt32(Session["UserID"]);
+                //xu ly tu dong: CreateBy
+                suppliers.CreateBy = Convert.ToInt32(Session["UserId"]);
+                //xu ly tu dong: CreateBy
+                suppliers.UpdateBy = Convert.ToInt32(Session["UserId"]);
                 //xu ly tu dong: Order
                 if (suppliers.Order == null)
                 {
@@ -78,7 +77,7 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
                 //xu ly tu dong: Slug
                 suppliers.Slug = XString.Str_Slug(suppliers.Name);
 
-                ///xu ly cho phan upload hình ảnh
+                //xu ly cho phan upload hình ảnh
                 var img = Request.Files["img"];//lay thong tin file
                 if (img.ContentLength != 0)
                 {
@@ -88,14 +87,14 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
                     {
                         string slug = suppliers.Slug;
                         //ten file = Slug + phan mo rong cua tap tin
-                        string imgName = slug  + img.FileName.Substring(img.FileName.LastIndexOf("."));
+                        string imgName = slug + suppliers.Id + img.FileName.Substring(img.FileName.LastIndexOf("."));
                         suppliers.Img = imgName;
                         //upload hinh
                         string PathDir = "~/Public/img/supplier";
                         string PathFile = Path.Combine(Server.MapPath(PathDir), imgName);
                         img.SaveAs(PathFile);
                     }
-                }//ket thuc phan upload hinh anh                                                                                        
+                }//ket thuc phan upload hinh anh
 
 
                 //chèn mẫu tin vào database
@@ -107,10 +106,29 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
             ViewBag.ListOrder = new SelectList(suppliersDAO.getList("Index"), "Order", "Name");
             return View(suppliers);
         }
-
         //EDIT
         // GET: Admin/Supplier/Edit/5
-     
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                //thong bao that bai 
+                TempData["message"] = new XMessage("danger", "Không tồn tại nhà cung cấp");
+                return RedirectToAction("Index");
+            }
+            Suppliers suppliers = suppliersDAO.getRow(id);
+            if (suppliers == null)
+            {
+                //thong bao that bai 
+                TempData["message"] = new XMessage("danger", "Không tồn tại nhà cung cấp");
+                return RedirectToAction("Index");
+            }
+            ViewBag.ListOrder = new SelectList(suppliersDAO.getList("Index"), "Order", "Name");
+            return View(suppliers);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(Suppliers suppliers)
         {
             if (ModelState.IsValid)
@@ -157,7 +175,6 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
 
                 }//ket thuc phan upload hinh anh
 
-
                 //Cập nhật mẫu tin vào DB
                 suppliersDAO.Update(suppliers);
                 //Thông báo tạo mẫu tin thành công 
@@ -167,6 +184,8 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
             ViewBag.ListOrder = new SelectList(suppliersDAO.getList("Index"), "Order", "Name");
             return View(suppliers);
         }
+        //DELETE
+        // GET: Admin/Supplier/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -210,6 +229,7 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
             TempData["message"] = new XMessage("success", "Xóa nhà cung cấp thành công");
             return RedirectToAction("Trash");
         }
+
         //phat sinh them mot so action moi: Status, Trash, DelTrash, Undo
         //STATUS
         //// GET: Admin/Category/Status/5

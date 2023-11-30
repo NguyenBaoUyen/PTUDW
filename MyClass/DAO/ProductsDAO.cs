@@ -1,47 +1,59 @@
-﻿using MyClass.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyClass.Model;
 
 namespace MyClass.DAO
 {
     public class ProductsDAO
     {
-        //cOPY CLas 
+        //coppy noi dung cua class categories, thay the category = suppliers
         private MyDBContext db = new MyDBContext();
-        //SELECT * FROM
+
+        //SELECT * FROM ...
         public List<Products> getList()
         {
             return db.Products.ToList();
         }
-        //index select * from cho Index chi voi status 1,2
-        public List<Products> getList(string status = "ALL")//status 0,1,2
+
+        //Index chi voi staus 1,2        
+        public List<Products> getList(string status = "ALL")
         {
             List<Products> list = null;
             switch (status)
             {
-                case "Index"://1,2
+                case "Index":
                     {
-                        list = db.Products.Where(m => m.Status != 0).ToList();
+                        if (db != null)
+                        {
+                            list = db.Products.Where(m => m.Status != 0).ToList();
+                        }
                         break;
                     }
-                case "Trash"://0
+                case "Trash":
                     {
-                        list = db.Products.Where(m => m.Status == 0).ToList();
+                        if (db != null)
+                        {
+                            list = db.Products.Where(m => m.Status == 0).ToList();
+                        }
                         break;
                     }
                 default:
                     {
-                        list = db.Products.ToList();
+                        if (db != null)
+                        {
+                            list = db.Products.ToList();
+                        }
                         break;
                     }
             }
             return list;
         }
-        //detail
+
+        //details
         public Products getRow(int? id)
         {
             if (id == null)
@@ -53,19 +65,22 @@ namespace MyClass.DAO
                 return db.Products.Find(id);
             }
         }
-        //tao moi
+
+        //tao moi mau tin
         public int Insert(Products row)
         {
             db.Products.Add(row);
             return db.SaveChanges();
         }
-        //cap nhat
+
+        //cap nhat mau tin
         public int Update(Products row)
         {
             db.Entry(row).State = EntityState.Modified;
             return db.SaveChanges();
         }
-        //xoa mau tin
+
+        //Xoa mau tin
         public int Delete(Products row)
         {
             db.Products.Remove(row);

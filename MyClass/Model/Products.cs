@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace MyClass.Model
 {
     [Table("Products")]
@@ -35,7 +34,7 @@ namespace MyClass.Model
         [Display(Name = "Gía bán")]
         public decimal SalePrice { get; set; }
         [Required(ErrorMessage = "Số lượng không để trống")]
-        [Display(Name = "Số lươmgj")]
+        [Display(Name = "Số lượng")]
         public decimal Qty { get; set; }
         [Required(ErrorMessage = "Mô tả không để trống")]
         [Display(Name = "Mô tả")]
