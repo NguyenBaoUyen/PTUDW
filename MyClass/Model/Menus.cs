@@ -43,6 +43,6 @@ namespace MyClass.Model
         public DateTime UpdateAt { get; set; }
         [Required(ErrorMessage = "Trạng thái không để trống")]
         [Display(Name = "Trạng thái")]
-        public int Status { get; set; }
+        public int? Status { get; set; }
     }
 }

@@ -308,5 +308,124 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
             menusDAO.Delete(menus);
             return RedirectToAction("Index");
         }
+
+
+
+        //public ActionResult Status(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        //Thông báo cập nhập trạng thái thất bại
+
+        //        TempData["message"] = new XMessage("danger", "Cập nhập trạng thái thất bại");
+        //        return RedirectToAction("Index");
+        //    }
+        //    //Truy vấn id
+        //    Menus menus = menusDAO.getRow(id);
+        //    if (menusDAO == null)
+        //    {
+        //        //Thông báo cập nhập trạng thái thất bại
+
+        //        TempData["message"] = new XMessage("danger", "Cập nhập trạng thái thất bại");
+        //        return RedirectToAction("Index");
+        //    }
+        //    else
+        //    {
+
+
+        //        //chuyển đổi trạng thái của Status 1<->2
+        //        menus.Status = (menus.Status == 1) ? 2 : 1;
+        //        //Cập nhập trạng thái
+        //        menus.UpdateAt = DateTime.Now;
+        //        //cập nhập lại database
+        //        menusDAO.Update(menus);
+
+        //        //Thông báo cập nhập trạng thái thành công
+        //        TempData["message"] = TempData["message"] = new XMessage("success", "Cập nhập trạng thái thành công");
+        //        return RedirectToAction("Index");
+        //    }
+        //}
+
+
+
+        // GET: Admin/Category/DelTrash/5
+        public ActionResult DelTrash(int? id)
+        {
+            if (id == null)
+            {
+                //Thông báo cập nhập trạng thái thất bại
+
+                TempData["message"] = new XMessage("danger", "Không tìm thấy mẫu tin");
+                return RedirectToAction("Index");
+            }
+            //Truy vấn id
+            Menus menus = menusDAO.getRow(id);
+            if (menus == null)
+            {
+                //Thông báo cập nhập trạng thái thất bại
+
+                TempData["message"] = new XMessage("danger", "Không tìm thấy mẫu tin");
+                return RedirectToAction("Index");
+            }
+            else
+            {
+
+
+                //chuyển đổi trạng thái của Status 1,2<->0 : khong hieu thi o index
+                menus.Status = 0;
+                //Cập nhập trạng thái
+                menus.UpdateAt = DateTime.Now;
+                //cập nhập lại database
+                menusDAO.Update(menus);
+
+                //Thông báo cập nhập trạng thái thành công
+                TempData["message"] = TempData["message"] = new XMessage("success", "Xóa mẫu tin thành công");
+                return RedirectToAction("Index");
+            }
+        }
+
+        /// Trash
+        // GET: Admin/Category/Recover
+        public ActionResult Trash()
+        {
+            return View(menusDAO.getList("Trash"));
+        }
+        //Recover
+        // GET: Admin/Category/Recover/5
+
+        public ActionResult Recover(int? id)
+        {
+            if (id == null)
+            {
+                //Thông báo cập nhập trạng thái thất bại
+
+                TempData["message"] = new XMessage("danger", "Phục hồi mẫu tin thất bại");
+                return RedirectToAction("Index");
+            }
+            //Truy vấn id
+            Menus menus = menusDAO.getRow(id);
+            if (menus == null)
+            {
+                //Thông báo cập nhập trạng thái thất bại
+
+                TempData["message"] = new XMessage("danger", "Phục hồi mẫu tin thất bại");
+                return RedirectToAction("Index");
+            }
+            else
+            {
+
+
+                //chuyển đổi trạng thái của Status 0-> 2: không xuất bản
+                menus.Status = 2;
+                //Cập nhập trạng thái
+                menus.UpdateAt = DateTime.Now;
+                //cập nhập lại database
+                menusDAO.Update(menus);
+
+                //Thông báo phục hồi mẫu tin thành công
+                TempData["message"] = TempData["message"] = new XMessage("success", "Phục hồi mẫu tin thành công");
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

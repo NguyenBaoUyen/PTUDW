@@ -13,18 +13,32 @@ namespace MyClass.Model
     {
         [Key]
         public int Id { get; set; }
+        [Required(ErrorMessage = "Tên người nhận không để trống")]
+        [Display(Name = "Tên người nhận")]
         public int UserId { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Địa chỉ người nhận không để trống")]
+        [Display(Name = "Địa chỉ người nhận")]
         public string ReceiverAdress { get; set; }
-        
-        [Required]
+
+        [Required(ErrorMessage = "Email người nhận không để trống")]
+        [Display(Name = "Email người nhận")]
         public string ReceiverEmail { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Số điện thoại người nhận không để trống")]
+        [Display(Name = "Số điện thoại người nhận")]
         public string ReceiverPhone { get; set; }
+        [Display(Name = "Ghi chú")]
         public string Note { get; set; }
+        [Required(ErrorMessage = "Ngày tạo không để trống")]
+        [Display(Name = "Ngày tạo")]
         public DateTime CreateAt { get; set; }
+        [Required(ErrorMessage = "Người cập nhật không để trống")]
+        [Display(Name = "Người cập nhật")]
         public int UpdateBy { get; set; }
+        [Required(ErrorMessage = "Ngày cập nhật không để trống")]
+        [Display(Name = "Ngày cập nhật")]
         public DateTime UpdateAt { get; set; }
+        [Required(ErrorMessage = "Trạng thái không để trống")]
+        [Display(Name = "Trạng thái")]
         public int Status { get; set; }
     }
 }

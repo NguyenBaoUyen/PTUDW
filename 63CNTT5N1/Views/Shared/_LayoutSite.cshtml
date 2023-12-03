@@ -21,7 +21,7 @@
     <!--================ Start Header Menu Area =================-->
     <header class="header_area">
         <div class="main_menu">
-           @Html.Action("MainMenu","Module")
+            @Html.Action("MainMenu", "Module")
         </div>
     </header>
     <!--================ End Header Menu Area =================-->
@@ -29,55 +29,53 @@
     @RenderBody()
 
     <!--================ Start footer Area  =================-->
-    <footer class="footer">
+    <footer class="footer brown-footer">
         <div class="footer-area">
             <div class="container">
                 <div class="row section_gap">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6" >
                         <div class="single-footer-widget tp_widgets">
-                            <h4 class="footer_title large_title">Our Mission</h4>
+                            <h4 class="footer_title large_title">Nhiệm Vụ</h4>
                             <p>
-                                So seed seed green that winged cattle in. Gathering thing made fly you're no
-                                divided deep moved us lan Gathering thing us land years living.
+                                Thưởng một chén trà ngon thật chẳng còn gì bằng nhưng nếu tặng trà ngon cho người mình trân quý lại càng mãn nguyện hơn!
                             </p>
                             <p>
-                                So seed seed green that winged cattle in. Gathering thing made fly you're no divided deep moved
+                                Tea Vista hân hạnh được là cầu nối cho những hạnh ngộ của đối tác, khách hàng. Chén trà đậm đà, 
+                                hậu vị sâu lắng cũng giống như tâm tình của người trao và người nhận vậy!
                             </p>
                         </div>
                     </div>
                     <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
                         <div class="single-footer-widget tp_widgets">
-                            <h4 class="footer_title">Quick Links</h4>
+                            <h4 class="footer_title">Đường Dẫn</h4>
                             <ul class="list">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Product</a></li>
-                                <li><a href="#">Brand</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Trang Chủ</a></li>
+                                <li><a href="#">Loại Hàng</a></li>
+                                <li><a href="#">Nhà Cung Cấp</a></li>
+                                <li><a href="#">Sản Phẩm</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="single-footer-widget instafeed">
-                            <h4 class="footer_title">Gallery</h4>
+                            <h4 class="footer_title">Sản Phẩm</h4>
                             <ul class="list instafeed d-flex flex-wrap">
-                                <li><img src="Public/img/gallery/r1.jpg" alt=""></li>
-                                <li><img src="Public/img/gallery/r2.jpg" alt=""></li>
-                                <li><img src="Public/img/gallery/r3.jpg" alt=""></li>
-                                <li><img src="Public/img/gallery/r5.jpg" alt=""></li>
-                                <li><img src="Public/img/gallery/r7.jpg" alt=""></li>
-                                <li><img src="Public/img/gallery/r8.jpg" alt=""></li>
+                                <li><img src="~/Public/img/product/product1.jpg"alt="Ảnh" style="width: 70px; height: 70px;"></li>
+                                <li><img src="~/Public/img/product/product8.jpg"alt="Ảnh" style="width: 70px; height: 70px;"></li>
+                                <li><img src="~/Public/img/product/product6.jpg"alt="Ảnh" style="width: 70px; height: 70px;"></li>
+                                <li><img src="~/Public/img/product/product7.jpg" alt="Ảnh" style="width: 70px; height: 70px;"></li>
+                                <li><img src="~/Public/img/product/product3.jpg"alt="Ảnh" style="width: 70px; height: 70px;"></li>
+                                <li><img src="~/Public/img/product/product5.jpg"alt="Ảnh" style="width: 70px; height: 70px;"></li>
                             </ul>
                         </div>
                     </div>
                     <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
                         <div class="single-footer-widget tp_widgets">
-                            <h4 class="footer_title">Contact Us</h4>
+                            <h4 class="footer_title">Liên Hệ</h4>
                             <div class="ml-40">
                                 <p class="sm-head">
                                     <span class="fa fa-location-arrow"></span>
-                                    Head Office
+                                    Tea Vista Office
                                 </p>
                                 <p>123, Main Street, Your City</p>
 
@@ -110,8 +108,8 @@
                 <div class="row d-flex">
                     <p class="col-lg-12 footer-text text-center">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;
-                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        Bản quyền &copy;
+                        <script>document.write(new Date().getFullYear());</script> Được tạo bởi <i class="fa fa-heart" aria-hidden="true"></i> bởi <a href="https://www.facebook.com/profile.php?id=100024233111663" target="_blank">Bảo Uyên</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>
@@ -129,3 +127,26 @@
     <script src="Public/js/main.js"></script>
 </body>
 </html>
+<style>
+    .footer-area {
+        background-color:bisque;/* Mã màu nâu nhạt */
+        color: #fff; /* Màu văn bản trắng hoặc màu phù hợp */
+    }
+    .footer-bottom {
+        background-color:burlywood;/* Mã màu nâu nhạt */
+        color: #fff; /* Màu văn bản trắng hoặc màu phù hợp */
+    }
+    .footer_title {
+        color: #000; /* Màu văn bản đen */
+    }
+    .ml-40 {
+        color: #000; /* Màu văn bản đen */
+    }
+        .ml-40 .sm-head {
+            color: #000; /* Màu văn bản đen cho các tiêu đề nhỏ */
+        }
+
+        .ml-40 p {
+            color: #000; /* Màu văn bản đen cho nội dung văn bản */
+        }
+</style>

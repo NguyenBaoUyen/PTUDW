@@ -1,14 +1,14 @@
-﻿@model IEnumerable<MyClass.Model.Suppliers>
-//khi có nhìu hơn 1 mẫu tin
+﻿﻿@model IEnumerable<MyClass.Model.Suppliers>
 
 @{
-    ViewBag.Title = "Trang chủ của nhà cung cấp";
+    ViewBag.Title = "Trang chủ nhà cung cấp";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 @section header{
     <link rel="stylesheet" href="~/Public/css/jquery.dataTables.min.css" />
 }
+
 @section footer{
     <script src="~/Public/js/jquery.dataTables.min.js"></script>
     <script>let table = new DataTable('#myTable');</script>

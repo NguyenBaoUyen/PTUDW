@@ -28,10 +28,10 @@ namespace MyClass.Model
         [Display(Name = "Hình ảnh")]
         public string Img { get; set; }
         [Required(ErrorMessage = "Gía nhập không để trống")]
-        [Display(Name = "Gía nhập")]
+        [Display(Name = "Giá nhập")]
         public decimal Price { get; set; }
         [Required(ErrorMessage = "Gía bán không để trống")]
-        [Display(Name = "Gía bán")]
+        [Display(Name = "Giá bán")]
         public decimal SalePrice { get; set; }
         [Required(ErrorMessage = "Số lượng không để trống")]
         [Display(Name = "Số lượng")]
@@ -54,7 +54,7 @@ namespace MyClass.Model
         [Required(ErrorMessage = "Ngày cập nhật không để trống")]
         [Display(Name = "Ngày cập nhật")]
         public DateTime UpdateAt { get; set; }
-        [Required(ErrorMessage = "Trạng thái không để trống")]
+        
         [Display(Name = "Trạng thái")]
         public int? Status { get; set; }
     }

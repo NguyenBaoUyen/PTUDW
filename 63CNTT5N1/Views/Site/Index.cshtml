@@ -3,5 +3,653 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutSite.cshtml";
 }
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!-- nhúng font sono -->
+<link href='https://fonts.googleapis.com/css?family=Sono' rel='stylesheet'>
+<main class="site-main">
 
-<h2>So mau tin =@ViewBag.choi</h2>
+    <section class="hero-banner1 ">
+        <div class="container">
+            <div class="row no-gutters  align-items-center pt-60px ">
+                <div class="col-12 col-sm-5 d-none d-sm-block brown-background">
+                    <div class="hero-banner__img ">
+                        <img class="img-fluid w-100 brown-image" src="/Public/img/home/product10.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
+                    <div class="hero-banner__content">
+                        <div class="logo-container">
+                            <!-- Thêm container cho logo -->
+
+                        </div>
+                        <h4><img class="logo1 img-fluid" src="/Public/img/home/logo.png" alt="Logo">Tea Vista</h4>
+                        <h3>
+                            Quality tea production from Vietnam
+                        </h3>
+                        <p>
+                            Tea Vista tự hào lan tỏa những búp trà di sản từ vùng trà trung du Tân Cương
+                            tới những loại trà vùng núi phía Bắc Việt Nam. Mang những chén trà sạch như dòng sữa mẹ,
+                            đậm đà hương vị truyền thống tới với những người yêu trà khắp muôn nơi.
+                        </p>
+                        <a class="button button-hero brown-button" href="#">Browse Now</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @*<div class="container-md  ">
+
+        </div>*@
+
+
+    <section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-2 col-4 text-center">
+                    <img class="logo img-fluid" src="/Public/img/home/icon1.png" alt="Logo">
+                    <h4><b>Chất lượng cao</b></h4>
+                    <h5><small>Trà được trồng hoàn toàn theo phương pháp hữu cơ truyền thống. Áp dụng mô hình vườn rừng tự nhiên.</small></h5>
+                </div>
+                <div class="col-md-2 col-4 text-center">
+                    <img class="logo img-fluid" src="/Public/img/home/icon2.png" alt="Logo">
+                    <h4><b>Hương vị tinh khiết</b></h4>
+                    <h5><small>Trà được thu hái và chế biến theo phương pháp thủ công truyền thống không có bất cứ phụ gia, hóa chất nào.</small></h5>
+                </div>
+                <div class="col-md-2 col-4 text-center">
+                    <img class="logo img-fluid" src="/Public/img/home/icon3.png" alt="Logo">
+                    <h4><b>Không GMO</b></h4>
+                    <h5><small>Trà được chế biến từ những búp trà trung du Tân Cương cổ thụ thuần chủng hay những búp trà xanh mát</small></h5>
+                </div>
+                <div class="col-md-2 col-4 text-center">
+                    <img class="logo img-fluid" src="/Public/img/home/icon4.png" alt="Logo">
+                    <h4><b>Đa dạng về quy cách</b></h4>
+                    <h5><small>Trà được hái theo quy cách từ 1 tôm, 1 tôm 1 lá tới 1 tôm 3 lá trên những giống trà khác nhau.</small></h5>
+                </div>
+                <div class="col-md-2 col-4 text-center">
+                    <img class="logo img-fluid" src="/Public/img/home/icon5.png" alt="Logo">
+                    <h4><b>Đóng gói thẩm mỹ</b></h4>
+                    <h5><small>Trà không chỉ để uống, bao bì đẹp mang đến sự tự tin khi mang làm quà tặng.</small></h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--================ Hero banner start =================-->
+    <!--================ Hero Carousel start =================-->
+    <section class="section-margin mt-0">
+        <div class="nayyf-overlay">
+            <p>
+                <h4>Sản phẩm của chúng tôi</h4>
+                <h2>Hãy uống trà vì sức khỏe của của bạn!</h2>
+            <p>
+                Một năm có bốn mùa xuân – hạ – thu – đông thì cũng có bấy nhiêu loại trà theo từng mùa. Mỗi mùa lại cho hương vị trà đặc trưng hơn hẳn. Trà có nhiều dòng, mỗi dòng một công dụng khác nhau cho sức khỏe. Phổ biến nhất là trà xanh,
+                quý hiếm bậc nhất là bạch trà và không thể thiếu hồng trà cho những ngày đông lạnh giá!
+            </p>
+
+
+
+        </div>
+        <div class="owl-carousel owl-theme hero-carousel">
+            <div class="hero-carousel__slide">
+                <img src="~/Public/img/product/product2.jpg" alt="" class="img-fluid">
+                <a href="#" class="hero-carousel__slideOverlay brown-overlay">
+                    <h3>Đủ Các Loại Trà</h3>
+                    <p>Loại trà</p>
+                </a>
+
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="~/Public/img/product/khay5.jpg" alt="" class="img-fluid">
+                <a href="#" class="hero-carousel__slideOverlay brown-overlay">
+                    <h3>Giá Kệ Đỡ Bánh Trà</h3>
+                    <p>Giá đựng trà</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="~/Public/img/product/hu-tra.jpg" alt="" class="img-fluid">
+                <a href="#" class="hero-carousel__slideOverlay brown-overlay">
+                    <h3>Hủ Trà Gốm Nâu, Nắp Vải</h3>
+                    <p>Bình đựng trà</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="offer1" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
+        <div class="container">            
+                <div class="col-md-6 col-12 text-center">
+                    <div class=" ">
+                        <h3><b>Sau nước, trà là đồ uống phổ biến nhất trên thế giới.</b></h3>
+                        <h5><small>Trà có rất nhiều lợi ích tới sức khỏe, sắc đẹp và vóc dáng cho nhiều lứa tuổi.</small></h5>
+                        <h6><small>Hãy đun sôi cái tôi của bạn, làm bay hơi mọi lo lắng, pha loãng mọi buồn phiền, lọc đi mọi sai lầm và bắt đầu thưởng thức sự hạnh phúc.</small></h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-12 note-icon-text-height order-md-1 order-2">
+                            <img class="logo img-fluid" src="/Public/img/home/icon6.png" alt="Logo">
+                            <h5><small>Cải thiện chức năng não</small></h5>
+                        </div>
+                        <div class="col-md-6 col-12 text-center order-md-2 order-1">
+                            <img class="logo img-fluid" src="/Public/img/home/icon7.png" alt="Logo">
+                            <h5><small>Loại bỏ các chất độc hại</small></h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-12 text-center order-md-3 order-3">
+                            <img class="logo img-fluid" src="/Public/img/home/icon8.png" alt="Logo">
+                            <h5><small> Thúc đẩy giảm cân</small></h5>
+                        </div>
+                        <div class="col-md-6 col-12 text-center order-md-4 order-4">
+                            <img class="logo img-fluid" src="/Public/img/home/icon9.png" alt="Logo">
+                            <h5><small> Kéo dài tuổi thọ</small></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+    </section>
+
+
+
+
+
+    <!--================ Hero Carousel end =================-->
+    <!-- ================ trending product section start ================= -->
+    <section class="section-margin calc-60px">
+        <div class="container">
+            <div class="section-intro pb-60px">
+                <p>Gợi ý mua hàng</p>
+                <h2>Sản phẩm được ưa chuộng</h2>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card text-center card-product">
+                        <div class="card-product__img">
+                            <img class="card-img" src="~/Public/img/product/product11.jpg" alt="">
+                            <ul class="card-product__imgOverlay">
+                                <li><button><i class="ti-search"></i></button></li>
+                                <li><button><i class="ti-shopping-cart"></i></button></li>
+                                <li><button><i class="ti-heart"></i></button></li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <p>Herbal Tea</p>
+                            <h4 class="card-product__title"><a href="single-product.html">Trà Thảo Mộc</a></h4>
+                            <p class="card-product__price">800.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card text-center card-product">
+                        <div class="card-product__img">
+                            <img class="card-img" src="/Public/img/product/product2.jpg" alt="">
+                            <ul class="card-product__imgOverlay">
+                                <li><button><i class="ti-search"></i></button></li>
+                                <li><button><i class="ti-shopping-cart"></i></button></li>
+                                <li><button><i class="ti-heart"></i></button></li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <p>Green Tea </p>
+                            <h4 class="card-product__title"><a href="single-product.html">Trà Xanh</a></h4>
+                            <p class="card-product__price">250.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card text-center card-product">
+                        <div class="card-product__img">
+                            <img class="card-img" src="~/Public/img/product/product1.jpg" alt="">
+                            <ul class="card-product__imgOverlay">
+                                <li><button><i class="ti-search"></i></button></li>
+                                <li><button><i class="ti-shopping-cart"></i></button></li>
+                                <li><button><i class="ti-heart"></i></button></li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <p>Earl Grey Tea</p>
+                            <h4 class="card-product__title"><a href="single-product.html">Trà Bá Tước</a></h4>
+                            <p class="card-product__price">750.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card text-center card-product">
+                        <div class="card-product__img">
+                            <img class="card-img" src="/Public/img/product/product4.jpg" alt="">
+                            <ul class="card-product__imgOverlay">
+                                <li><button><i class="ti-search"></i></button></li>
+                                <li><button><i class="ti-shopping-cart"></i></button></li>
+                                <li><button><i class="ti-heart"></i></button></li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <p>Artichoke Tea</p>
+                            <h4 class="card-product__title"><a href="single-product.html">Trà Atiso</a></h4>
+                            <p class="card-product__price">500.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card text-center card-product">
+                        <div class="card-product__img">
+                            <img class="card-img" src="/Public/img/product/product5.jpg" alt="">
+                            <ul class="card-product__imgOverlay">
+                                <li><button><i class="ti-search"></i></button></li>
+                                <li><button><i class="ti-shopping-cart"></i></button></li>
+                                <li><button><i class="ti-heart"></i></button></li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <p>Shan Tea</p>
+                            <h4 class="card-product__title"><a href="single-product.html">Trà Shan Tuyết</a></h4>
+                            <p class="card-product__price">900.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card text-center card-product">
+                        <div class="card-product__img">
+                            <img class="card-img" src="/Public/img/product/product6.jpg" alt="">
+                            <ul class="card-product__imgOverlay">
+                                <li><button><i class="ti-search"></i></button></li>
+                                <li><button><i class="ti-shopping-cart"></i></button></li>
+                                <li><button><i class="ti-heart"></i></button></li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <p>Butterfly Pea Tea</p>
+                            <h4 class="card-product__title"><a href="single-product.html">Trà Hoa Đậu Biếc </a></h4>
+                            <p class="card-product__price">250.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card text-center card-product">
+                        <div class="card-product__img">
+                            <img class="card-img" src="/Public/img/product/product7.jpg" alt="">
+                            <ul class="card-product__imgOverlay">
+                                <li><button><i class="ti-search"></i></button></li>
+                                <li><button><i class="ti-shopping-cart"></i></button></li>
+                                <li><button><i class="ti-heart"></i></button></li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <p>Chamomile Tea</p>
+                            <h4 class="card-product__title"><a href="single-product.html">Trà Hoa Cúc</a></h4>
+                            <p class="card-product__price">350.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card text-center card-product">
+                        <div class="card-product__img">
+                            <img class="card-img" src="/Public/img/product/product8.jpg" alt="">
+                            <ul class="card-product__imgOverlay">
+                                <li><button><i class="ti-search"></i></button></li>
+                                <li><button><i class="ti-shopping-cart"></i></button></li>
+                                <li><button><i class="ti-heart"></i></button></li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <p>Jasmine Tea</p>
+                            <h4 class="card-product__title"><a href="#">Trà Nhài</a></h4>
+                            <p class="card-product__price">450.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ trending product section end ================= -->
+    <!-- ================ offer section start ================= -->
+    @*<section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5">
+                        <div class="offer__content text-center">
+                            <h3>Up To 50% Off</h3>
+                            <h4>Winter Sale</h4>
+                            <p>Him she'd let them sixth saw light</p>
+                            <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>*@
+    <!-- ================ offer section end ================= -->
+    <!-- ================ Best Selling item  carousel ================= -->
+
+    <section class="section-margin calc-60px">
+        <div class="container">
+            <div class="section-intro pb-60px">
+                <p>Mặt hàng phổ biến trên thị trường</p>
+                <h2>Bán chạy nhất</h2>
+            </div>
+            <div class="owl-carousel owl-theme" id="bestSellerCarousel">
+                <div class="card text-center card-product">
+                    <div class="card-product__img">
+                        <img class="img-fluid" src="/Public/img/product/product1.jpg" alt="">
+                        <ul class="card-product__imgOverlay">
+                            <li><button><i class="ti-search"></i></button></li>
+                            <li><button><i class="ti-shopping-cart"></i></button></li>
+                            <li><button><i class="ti-heart"></i></button></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <p>Loại Trà</p>
+                        <h4 class="card-product__title"><a href="single-product.html">Trà Bá Tước</a></h4>
+                        <p class="card-product__price">750.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                    </div>
+                </div>
+
+                <div class="card text-center card-product">
+                    <div class="card-product__img">
+                        <img class="img-fluid" src="/Public/img/product/product8.jpg" alt="">
+                        <ul class="card-product__imgOverlay">
+                            <li><button><i class="ti-search"></i></button></li>
+                            <li><button><i class="ti-shopping-cart"></i></button></li>
+                            <li><button><i class="ti-heart"></i></button></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <p>Loại Trà</p>
+                        <h4 class="card-product__title"><a href="single-product.html">Trà Nhài</a></h4>
+                        <p class="card-product__price">450.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                    </div>
+                </div>
+
+                <div class="card text-center card-product">
+                    <div class="card-product__img">
+                        <img class="img-fluid" src="/Public/img/product/product7.jpg" alt="">
+                        <ul class="card-product__imgOverlay">
+                            <li><button><i class="ti-search"></i></button></li>
+                            <li><button><i class="ti-shopping-cart"></i></button></li>
+                            <li><button><i class="ti-heart"></i></button></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <p>Loại Trà</p>
+                        <h4 class="card-product__title"><a href="single-product.html">Trà Hoa Cúc</a></h4>
+                        <p class="card-product__price">350.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                    </div>
+                </div>
+
+                <div class="card text-center card-product">
+                    <div class="card-product__img">
+                        <img class="img-fluid" src="/Public/img/product/hu-tra.jpg" alt="">
+                        <ul class="card-product__imgOverlay">
+                            <li><button><i class="ti-search"></i></button></li>
+                            <li><button><i class="ti-shopping-cart"></i></button></li>
+                            <li><button><i class="ti-heart"></i></button></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <p>Bình Đựng Trà</p>
+                        <h4 class="card-product__title"><a href="single-product.html">Hủ Trà Gốm Nâu, Nắp Vải</a></h4>
+                        <p class="card-product__price">650.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                    </div>
+                </div>
+
+                <div class="card text-center card-product">
+                    <div class="card-product__img">
+                        <img class="img-fluid" src="/Public/img/product/khay5.jpg" alt="">
+                        <ul class="card-product__imgOverlay">
+                            <li><button><i class="ti-search"></i></button></li>
+                            <li><button><i class="ti-shopping-cart"></i></button></li>
+                            <li><button><i class="ti-heart"></i></button></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <p>Giá Đỡ Trà</p>
+                        <h4 class="card-product__title"><a href="single-product.html">Giá Đỡ Bánh Trà</a></h4>
+                        <p class="card-product__price">250.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                    </div>
+                </div>
+
+                <div class="card text-center card-product">
+                    <div class="card-product__img">
+                        <img class="img-fluid" src="/Public/img/product/product11.jpg" alt="">
+                        <ul class="card-product__imgOverlay">
+                            <li><button><i class="ti-search"></i></button></li>
+                            <li><button><i class="ti-shopping-cart"></i></button></li>
+                            <li><button><i class="ti-heart"></i></button></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <p>Loại Trà</p>
+                        <h4 class="card-product__title"><a href="single-product.html">Trà Thảo Mộc</a></h4>
+                        <p class="card-product__price">800.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- ================ Best Selling item  carousel end ================= -->
+    <!-- ================ Blog section start ================= -->
+    <section class="blog">
+        <div class="container">
+            <div class="section-intro pb-60px">
+                <p>Khám phá điều kỳ diệu phía sau những búp trà</p>
+                <h1>Cẩm nang trà <span class="section-intro__style"></span></h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card card-blog">
+                        <div class="card-blog__img">
+                            <img class="card-img rounded-0" src="/Public/img/blog/bia1.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <ul class="card-blog__info">
+                                <li><a href="#">By Admin</a></li>
+                                <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                            </ul>
+                            <h4 class="card-blog__title"><a href="single-blog.html">Bao bìa mới bảo vệ môi trường- Uống trà đầy yêu thương!</a></h4>
+                            <p>Với cải tiến mới trong sử dụng bao bì giấy tráng nhôm, các sản phẩm của Tea Vista đang góp phần chung tay bảo vệ môi trường</p>
+                            <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card card-blog">
+                        <div class="card-blog__img">
+                            <img class="card-img rounded-0" src="/Public/img/blog/bia7.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <ul class="card-blog__info">
+                                <li><a href="#">By Admin</a></li>
+                                <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                            </ul>
+                            <h4 class="card-blog__title"><a href="single-blog.html">Cách dùng chén thưởng hương trà</a></h4>
+                            <p>Khi tán gẫu với trà, chén thưởng hương thơm. Mọi người chủ yếu chỉ thưởng thức nước trà, mà không cần quan tâm nhiều đến việc thưởng thức trọn vẹn hương thơm tinh tế của nó.</p>
+                            <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card card-blog">
+                        <div class="card-blog__img">
+                            <img class="card-img rounded-0" src="/Public/img/blog/bia5.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <ul class="card-blog__info">
+                                <li><a href="#">By Admin</a></li>
+                                <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                            </ul>
+                            <h4 class="card-blog__title"><a href="single-blog.html"> Những địa danh trồng trà nổi tiếng tạo Việt Nam</a></h4>
+                            <p>Với điều kiện thổ nhưỡng và khí hậu thuận lợi, những giống trà đã được trồng khắp từ Bắc vào Nam, đưa Việt Nam trở thành nước sản xuất trà lớn thứ 7 và xuất khẩu trà lớn thứ 5 thế giới. </p>
+                            <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ Blog section end ================= -->
+    <!-- ================ Subscribe section start ================= -->
+    <section class="subscribe-position">
+        <div class="container">
+            <div class="subscribe text-center">
+                <h3 class="subscribe__title">NHẬN XÉT CỦA KHÁCH HÀNG</h3>
+                <p>Hạnh phúc của tôi không phải là bán được nhiều trà mà là sự hạnh phúc của khách hàng mỗi khi dùng sản phẩm</p>
+                <div id="mc_embed_signup">
+                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe-form form-inline mt-5 pt-1">
+                        <div class="form-group ml-sm-auto">
+                            <input class="form-control mb-1" type="email" name="EMAIL" placeholder="Enter your email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '">
+                            <div class="info"></div>
+                        </div>
+                        <button class="button button-subscribe mr-auto mb-1" type="submit">Subscribe Now</button>
+                        <div style="position: absolute; left: -5000px;">
+                            <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ================ Subscribe section end ================= -->
+
+
+
+</main>
+<style>
+    .brown-button {
+        background-color: #8B4513; /* Mã màu nâu ví dụ */
+        color: #fff; /* Màu chữ để tương phản */
+        /* Các thuộc tính CSS khác có thể được thêm vào tùy ý */
+    }
+
+    .brown-overlay {
+        background-color: #D2B48C; /* Mã màu nâu nhạt ví dụ */
+        /* Các thuộc tính CSS khác có thể được thêm vào tùy ý */
+    }
+
+    .brown-background {
+        background-color: #D2B48C; /* Mã màu nâu nhạt ví dụ */
+        /* Các thuộc tính CSS khác có thể được thêm vào tùy ý */
+    }
+        .brown-background .row .col-md-2,
+        .brown-background .row .col-4 {
+            margin: 10px; /* Điều chỉnh giá trị khoảng cách tùy chọn */
+        }
+
+            .brown-background .row .col-md-2:first-child,
+            .brown-background .row .col-4:first-child {
+                margin-left: 0;
+            }
+
+            .brown-background .row .col-md-2:last-child,
+            .brown-background .row .col-4:last-child {
+                margin-right: 0;
+            }
+     .logo {
+        filter: brightness(20%); /* Điều chỉnh độ sáng để thay đổi màu của logo */
+    }
+    .offer {
+        background-attachment: fixed;
+        background-position: 50% 0;
+        background-size: cover;
+        background-image: url('/Public/img/home/home3.jpg'); /* Thay đổi đường dẫn đến hình nền của bạn */
+        color: #fff; /* Màu chữ, bạn có thể thay đổi màu sắc theo ý muốn */
+        padding: 150px 0; /* Thêm padding theo nhu cầu của bạn */
+    }
+    .offer1 {
+        background-attachment: fixed;
+        text-align: right;
+        background-position: 50% 0;
+        background-size: cover; /* Hiển thị hình nền sao cho nó cover hết phần visible */
+        background-image: url('/Public/img/home/home1.jpg');
+        color: #fff;
+        padding: 150px 0;
+    }
+        .offer h3, .offer h4, .offer p {
+            margin: 0; /* Loại bỏ margin mặc định của các phần tử văn bản */
+        }
+
+        .offer a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600; /* Màu nút mua sắm, bạn có thể thay đổi màu sắc theo ý muốn */
+            color: #fff; /* Màu chữ nút mua sắm */
+            text-decoration: none;
+        }
+    .offer__content {
+        text-align: center;
+    }
+    .offer {
+        padding: 50px 0; /* Thêm padding cho phần offer */
+    }
+
+    .offer__content h4,
+    .offer__content h5 {
+        margin-top: 10px; /* Thêm margin cho các tiêu đề và mô tả */
+    }
+
+            .offer a:hover {
+                background-color: #333; /* Màu nút mua sắm khi di chuột qua */
+            }
+    .nayyf-overlay {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%; /* Đảm bảo chiều cao 100% để căn giữa nếu nội dung ít hơn */
+    }
+        .nayyf-overlay h4 {
+            color: burlywood;
+            font-family: 'Brush Script MT', cursive; /* Chọn màu nâu mong muốn */
+        }
+        .nayyf-overlay h2 {
+            color: chocolate;
+            font-style: italic;
+        }
+    section {
+        margin-bottom: 20px; /* Điều chỉnh giá trị theo nhu cầu của bạn */
+    }
+    .button-subscribe {
+        background-color: brown; /* Đặt màu nâu cho nút */
+        color: white; /* Đặt màu chữ là trắng hoặc màu khác tùy vào yêu cầu của bạn */
+        /* Các thuộc tính khác tùy thuộc vào yêu cầu thiết kế của bạn */
+        padding: 10px 20px; /* Thêm padding theo nhu cầu của bạn */
+        border: none; /* Xóa đường viền */
+        border-radius: 5px; /* Bo tròn góc */
+        cursor: pointer; /* Hiển thị con trỏ khi rê chuột lên nút */
+    }
+
+        /* Nếu bạn muốn thêm hiệu ứng khi hover, bạn có thể sử dụng */
+        /*.button-subscribe:hover {
+            background-color: darkbrown;*/ /* Màu nâu tối hơn khi hover */
+        /*}*/
+    /* CSS cho các nút màu nâu */
+    .button {
+        background-color: #8B4513; /* Mã màu nâu - Brown */
+        color: #fff; /* Màu chữ trắng */
+        border: none; /* Không có đường viền */
+        padding: 10px 20px; /* Kích thước đệm của nút */
+        cursor: pointer;
+        transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
+    }
+
+        /* Hover effect khi di chuột qua nút */
+        .button:hover {
+            background-color: #A0522D; /* Mã màu nâu đậm - Saddle Brown */
+        }
+
+
+</style>
+

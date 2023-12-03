@@ -112,18 +112,18 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
         {
             if (id == null)
             {
-                //thong bao that bai 
-                TempData["message"] = new XMessage("danger", "Không tồn tại nhà cung cấp");
+                //hien thi thong bao
+                TempData["message"] = new XMessage("danger", "Không tìm thấy nhà cung cấp");
                 return RedirectToAction("Index");
             }
             Suppliers suppliers = suppliersDAO.getRow(id);
             if (suppliers == null)
             {
-                //thong bao that bai 
-                TempData["message"] = new XMessage("danger", "Không tồn tại nhà cung cấp");
+                //hien thi thong bao
+                TempData["message"] = new XMessage("danger", "Không tìm thấy nhà cung cấp");
                 return RedirectToAction("Index");
             }
-            ViewBag.ListOrder = new SelectList(suppliersDAO.getList("Index"), "Order", "Name");
+            ViewBag.OrderList = new SelectList(suppliersDAO.getList("Index"), "Order", "Name");
             return View(suppliers);
         }
 
@@ -133,10 +133,12 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                //xử lý tự động cho các trường: Slug, CreateAt/By, UpdateAt/By, Order
-                //Xử lý tự động: UpdateAt
+                //xu ly tu dong cho cac truong: CreateAt/By, UpdateAt/By, Slug, OrderBy
+
+                //Xu ly tu dong cho: UpdateAt
                 suppliers.UpdateAt = DateTime.Now;
-                //Xử lý tự động: Order
+
+                //Xu ly tu dong cho: Order
                 if (suppliers.Order == null)
                 {
                     suppliers.Order = 1;
@@ -145,10 +147,11 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
                 {
                     suppliers.Order += 1;
                 }
-                //Xử lý tự động: Slug
+
+                //Xu ly tu dong cho: Slug
                 suppliers.Slug = XString.Str_Slug(suppliers.Name);
 
-                //xu ly cho phan upload hình ảnh
+                //xu ly cho phan upload hinh anh
                 var img = Request.Files["img"];//lay thong tin file
                 string PathDir = "~/Public/img/supplier";
                 if (img.ContentLength != 0)
@@ -166,7 +169,7 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
                     {
                         string slug = suppliers.Slug;
                         //ten file = Slug + phan mo rong cua tap tin
-                        string imgName = slug + img.FileName.Substring(img.FileName.LastIndexOf("."));
+                        string imgName = slug + suppliers.Id + img.FileName.Substring(img.FileName.LastIndexOf("."));
                         suppliers.Img = imgName;
                         //upload hinh
                         string PathFile = Path.Combine(Server.MapPath(PathDir), imgName);
@@ -175,13 +178,13 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
 
                 }//ket thuc phan upload hinh anh
 
-                //Cập nhật mẫu tin vào DB
+                //cap nhat mau tin vao DB
                 suppliersDAO.Update(suppliers);
-                //Thông báo tạo mẫu tin thành công 
-                TempData["message"] = new XMessage("success", "Cập nhật nhà cung cấp thành công");
+                //thong bao thanh cong
+                TempData["message"] = new XMessage("success", "Cập nhật mẩu tin thành công");
                 return RedirectToAction("Index");
             }
-            ViewBag.ListOrder = new SelectList(suppliersDAO.getList("Index"), "Order", "Name");
+            ViewBag.OrderList = new SelectList(suppliersDAO.getList("Index"), "Order", "Name");
             return View(suppliers);
         }
         //DELETE
